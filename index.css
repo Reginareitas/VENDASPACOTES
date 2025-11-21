@@ -1,0 +1,131 @@
+/* FUNDO */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("./img/igm2025.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000
+    ;
+
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 140, 0, 0.90);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+}
+
+/* TÍTULOS */
+h1, h2 {
+    text-align: center;
+    color: #3a1d00;
+    font-weight: bold;
+}
+h2{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* CAIXAS DE INFORMAÇÃO */
+.info-box {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-left: 6px solid #f1da02;
+}
+
+/* SUBTÍTULOS DAS CAIXAS */
+.titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* FORMULÁRIO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 6px solid #f1da02;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #f1da02;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+}
+
+button {
+    background: #25d366;
+    color: #fff;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1db154;
+}
+
+/* 🔥 RESPONSIVIDADE — MOBILE FIRST */
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px 0;
+    }
+
+    .container {
+        width: 95%;
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .info-box, form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}

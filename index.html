@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wind Pass - Réveillon</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Wind Pass<br>Réveillon Barra Grande<br>2025/2026</h1>
+        <h2 class="preco">💰 Valor do Wind Pass: R$ 600,00 por pessoa</h2>
+
+        <!-- Aviso -->
+        <div class="info-box">
+            <p class="titulo">❌ Não realizamos buscas em pousadas</p>
+            <p>O embarque e desembarque acontecem em ponto fixo no centro de Barra Grande, rua Timbiras no Bairro Borógodo e avenida principal Barra Grande e Barrinha garantindo organização,
+                segurança e pontualidade.</p>
+                <p>RETIRADA DE PULSEIRAS</p>
+                Loja Talho Nobre na Praça de Barra Grande
+
+        </div>
+
+        <!-- Horários -->
+        <h2>Horários das vans</h2>
+
+        <div class="info-box">
+            <p>
+                • 27/12 — 18h00 / 04h00<br>
+                • 28/12 — 10h00 / 18h00 - 18h30 / 4h00<br>
+                • 29/12 — 10h00 / 18h00 - 18h30 / 4h00<br>
+                • 30/12 — 10h00 / 18h00 - 18h30 / 4h00<br>
+                • 31/12 — 10h00 / 18h00 - 18h30 / 4h00<br>
+                • 01/01 — 08h00 / 18h00 - 18h00 / 00:00<br>
+                • 02/01 — 10h00 / 18h00 - 18h30 / 4h00<br>
+            </p>
+        </div>
+
+        <!-- Rotas -->
+        <h2>Rotas</h2>
+
+        <div class="info-box">
+            <p class="titulo">🚐 Pontos de embarque</p>
+            <p>
+                • VILA DOS POETAS<br>
+                • MANATI<br>
+                • BRASA DO MAR<br>
+                • RUA DO CENTRINHO<br>
+                • PRAÇA DE BARRA GRANDE<br>
+                • BOHAM<br>
+                • RUA QUE LIGA BARRA GRANDE À BARRINHA<br>
+                • RUA TIMBIRAS<br>
+                • LAVANDERIA SUMMER<br>
+                • RUA PRINCIPAL DA BARRINHA<br>
+                • RUA DENTRO DE BARRINHA<br>
+                • PONTA DO SARDIM<br>
+                • AKALMAR<br>
+                • RÉVEILLON EU DELICIA<br>
+                • RÉVEILLON UBA<br>
+                • RÉVEILLON BOBZ<br>
+            </p>
+        </div>
+
+         <!-- Formulário -->
+        <h2>Reserve agora</h2>
+        <h2 class="preco">Valor: R$ 600,00 por pessoa</h2>
+
+        <form id="formReserva">
+
+            <input type="text" id="nome" placeholder="Nome completo" required>
+
+            <input type="tel" id="telefone" placeholder="Telefone (WhatsApp)" required>
+
+            <input type="text" id="cpf" placeholder="CPF" required>
+
+            <input type="text" id="formapagamento" placeholder="FORMA DE PAGAMENTO" required>
+
+            <textarea id="obs" placeholder="Observações (opcional)"></textarea>
+
+            <button type="button" onclick="enviarWhatsApp()">Enviar no WhatsApp</button>
+
+        </form>
+
+    </div>
+
+    <!-- SCRIPT DO WHATSAPP -->
+    <script>
+        function enviarWhatsApp() {
+            const nome = document.getElementById("nome").value;
+            const telefone = document.getElementById("telefone").value;
+            const cpf = document.getElementById("cpf").value;
+            const formapagamento = document.getElementById("formapagamento").value;
+            const obs = document.getElementById("obs").value;
+
+            const numero = "5588994111737";
+
+            const texto =
+                `*Passwind - Reserva Réveillon 2025/2026*%0A%0A` +
+                `*Nome:* ${nome}%0A` +
+                `*Telefone:* ${telefone}%0A` +
+                `*CPF:* ${cpf}%0A` +
+                `*formapagamento:* ${formapagamento}%0A` +
+                `*Observações:* ${obs}%0A%0A` +
+                `*Mensagem enviada via formulário Passwind*`;
+
+            const url = `https://wa.me/${numero}?text=${texto}`;
+
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>d
